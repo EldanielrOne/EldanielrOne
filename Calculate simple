@@ -1,0 +1,141 @@
+<!doctype html>
+
+<html lang="pt-BR">
+ <head>
+    <meta charset="utf-8">
+    <title>Praticando Javascript - Exercício 1</title>
+ </head>
+ <body> 
+
+ </body>
+ 
+    <script type="text/javascript">
+         var metodo = prompt("Qual operação deseja fazer? ");
+         var numero1 = prompt("Insira o primeiro número: ");
+         var numero2 = prompt("Insira o segundo número: ");
+ 
+        var resultadoDaOperacao = 0;
+
+        if(metodo == "/"){
+         resultadoDaOperacao = divida(numero1,numero2);
+        } if(metodo == "*"){
+         resultadoDaOperacao = multiplica(numero1,numero2);
+        }if(metodo == "+"){
+         resultadoDaOperacao = soma(numero1,numero2);
+        }if(metodo == "-"){
+         resultadoDaOperacao = diminui(numero1,numero2);
+        }
+ 
+            alert('O resultado da operação é igual a: ' + resultadoDaOperacao);
+ 
+             function divida(numero1, numero2){     
+             return parseInt(numero1) / parseInt(numero2);
+         }
+            function multiplica(numero1, numero2){     
+            return parseInt(numero1) * parseInt(numero2);
+         }
+             function soma(numero1, numero2){     
+             return parseInt(numero1) + parseInt(numero2);
+          }
+             function diminui(numero1, numero2){     
+              return parseInt(numero1) - parseInt(numero2);
+         }
+
+
+
+    </script>
+ </html>
+
+__________________________________________________________________________________________________________________
+
+
+var metodo = prompt("Qual operação deseja fazer? ");
+var numero1;
+var numero2;
+ 
+ 
+ numero1= soliticaPrimeiroNumero();
+ 
+ 
+ numero2 = soliticaSegundoNumero();
+ 
+ 
+ var resultadoDaOperacao = calcule(numero1, numero2);
+ 
+ //Exibindo o resultado da operação na tela
+ alert('O resultado da operação é igual a: ' + resultadoDaOperacao); 
+
+ function solicitaMetodo(){
+    var metodo = prompt("Qual operação deseja fazer? ");
+    if(resultadoDaOperacao == "/"){
+        alert (resultadoDaOperacao = numero1 / numero2);
+        return resultadoDaOperacao;
+       } else if(resultadoDaOperacao == "*"){
+        alert (resultadoDaOperacao = numero1 * numero2);
+        return resultadoDaOperacao;
+       }else if(resultadoDaOperacao == "+"){
+        alert (resultadoDaOperacao = numero1 + numero2);
+        return resultadoDaOperacao;
+       }else{
+         if(resultadoDaOperacao == "-"){
+            alert(resultadoDaOperacao = numero1 - numero2);
+            return resultadoDaOperacao;
+         }
+        
+       }
+
+ }
+    //Declaração e atribuição de variável. Ela receberá o número inserido pelo usuário
+    //var numero1 = prompt("Insira o primeiro número: ");
+ 
+ 
+ function soliticaPrimeiroNumero(){
+ //Declaração e atribuição de variável. Ela receberá o número inserido pelo usuário
+ var numero1 = prompt("Insira o primeiro número: ");
+ 
+ 
+ if(numero1 < 0){
+ alert("O número precisa ser inteiro e positivo");
+ 
+ //Este tipo de retorno, onde a própria função é chamada novamente, é conhecido como recursividade
+ return soliticaPrimeiroNumero();
+ }else{
+ return numero1;
+ }
+ }
+ 
+ function soliticaSegundoNumero(){
+ var numero2 = prompt("Insira o segundo número: ");
+ 
+ if(numero2 < 0){
+ alert("O número precisa ser inteiro e positivo");
+ return soliticaSegundoNumero();
+
+ }else{
+ return numero2;
+ }
+ }
+ 
+ /*
+ Esta função recebe como parâmetro um array - que contém os 2 números que desejamos 
+calcular
+ */
+      function calcule(numero1, numero2){
+         if(resultadoDaOperacao == "/"){
+            alert (resultadoDaOperacao = numero1 / numero2);
+            return resultadoDaOperacao;
+           } else if(resultadoDaOperacao == "*"){
+            alert (resultadoDaOperacao = numero1 * numero2);
+            return resultadoDaOperacao;
+           }else if(resultadoDaOperacao == "+"){
+            alert (resultadoDaOperacao = numero1 + numero2);
+            return resultadoDaOperacao;
+           }else{
+             if(resultadoDaOperacao == "-"){
+                alert(resultadoDaOperacao = numero1 - numero2);
+                return resultadoDaOperacao;
+             }
+            
+           }
+ return resultadoDaOperacao; 
+}
